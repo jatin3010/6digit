@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder image">
+  <rect width="800" height="600" fill="#3a3a3a"/>
+  <g fill="none" stroke="#6a6a6a" stroke-width="2">
+    <rect x="40" y="40" width="720" height="520"/>
+    <line x1="40" y1="40" x2="760" y2="560"/>
+    <line x1="760" y1="40" x2="40" y2="560"/>
+  </g>
+  <circle cx="400" cy="260" r="46" fill="none" stroke="#9a9a9a" stroke-width="4"/>
+  <path d="M378 256 L396 274 L430 232" fill="none" stroke="#9a9a9a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#cfcfcf">6Digit</text>
+  <text x="400" y="402" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#9a9a9a">Replace with a real project image</text>
+</svg>

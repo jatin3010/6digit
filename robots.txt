@@ -1,0 +1,37 @@
+# 6digit.com — robots.txt
+# TODO: once deployed, verify this file is actually reachable at https://6digit.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /img/placeholders/
+Disallow: /index-demo-1.html
+Disallow: /index-demo-2.html
+Disallow: /source-files/
+Disallow: /.rate_limit/
+
+# Explicitly welcome major AI/answer-engine crawlers (GEO — Generative Engine Optimization).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://6digit.com/sitemap.xml

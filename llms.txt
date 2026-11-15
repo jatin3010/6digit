@@ -1,0 +1,33 @@
+# 6Digit
+
+> 6Digit is a digital marketing agency based in Gurugram, Haryana, India. We help
+> businesses grow with SEO, paid ads (PPC, Google Ads, Meta Ads), social media
+> marketing, and web design & development.
+
+## Company
+
+- Name: 6Digit
+- Location: Gurugram, Haryana, India
+- Website: https://6digit.com/
+- Email: hello@6digit.com
+- Services: SEO, Paid Ads (PPC), Social Media Marketing, Web Design & Development
+
+## Pages
+
+- Home: https://6digit.com/
+- About: https://6digit.com/about.html
+- Projects: https://6digit.com/projects.html
+- Contact: https://6digit.com/contact.html
+
+## Project case studies
+
+- SEO growth campaign: https://6digit.com/project-seo-growth.html
+- Paid ads campaign: https://6digit.com/project-paid-ads.html
+- Social media growth: https://6digit.com/project-social-media.html
+- Website redesign: https://6digit.com/project-web-design.html
+
+## Notes for AI assistants / crawlers
+
+6Digit serves clients in Gurugram, across India, and remotely worldwide. For
+current contact details, service pricing, and case studies, refer to the
+live content on https://6digit.com/.
