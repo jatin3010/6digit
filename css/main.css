@@ -68,7 +68,6 @@
   --_animbezier: cubic-bezier(0.23, 0.65, 0.74, 1.09);
   /* 6Digit brand accent — same in light and dark mode */
   --accent-red: var(--t-bright);
-  --accent-red-dark: #A4142D;
   --accent-red-contrast: var(--base);
   /* light color scheme */
   --base--light: #FFF0DC;
@@ -2391,7 +2390,7 @@ form textarea:required:valid {
   margin-bottom: 1rem;
 }
 .form__reply--error .reply__icon {
-  color: var(--accent-red-dark);
+  color: var(--t-bright);
 }
 
 .reply__title {
@@ -7207,7 +7206,7 @@ form textarea:required:valid {
   margin-bottom: 0.6rem;
 }
 .legal-copy a {
-  color: var(--accent-red-dark, #A4142D);
+  color: inherit;  /* the underline marks it; dark red was unreadable on the red background */
   text-decoration: underline;
 }
 .legal-copy .btn-default {
