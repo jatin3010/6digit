@@ -1551,6 +1551,20 @@ blockquote {
     font-size: 2.2rem;
   }
 }
+/* Below xl the full-width bottom menu covers the corner, so sit on the left at the sticky CTA's height */
+@media only screen and (max-width: 1199px) {
+  .btn-to-top {
+    right: auto;
+    left: 2rem;
+    bottom: 7rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .btn-to-top {
+    left: 5rem;
+    bottom: 8.5rem;
+  }
+}
 
 .slide-right:hover i::before {
   -webkit-animation: 0.4s ease-in-out 0s 1 both slideRight;
@@ -2580,6 +2594,7 @@ form textarea:required:valid {
 }
 
 .intro-bg-02__01 {
+  display: none; /* on phones it covers the hero button and cards */
   top: auto;
   bottom: -60px;
   right: 0;
@@ -2588,6 +2603,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .intro-bg-02__01 {
+    display: block;
     top: auto;
     bottom: -100px;
     right: 0;
@@ -2633,6 +2649,7 @@ form textarea:required:valid {
 }
 
 .intro-bg-02__02 {
+  display: none; /* on phones it covers the hero cards */
   bottom: -160px;
   top: auto;
   left: -30px;
@@ -2641,6 +2658,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .intro-bg-02__02 {
+    display: block;
     bottom: -200px;
     top: auto;
     left: -42px;
@@ -2841,6 +2859,19 @@ form textarea:required:valid {
 @media only screen and (min-width: 1600px) {
   .headline.headline-95-desktop {
     padding-bottom: 11.3rem;
+  }
+}
+/* Phones: tighter hero so its CTA sits above the fixed bottom menu even on short screens (360x640, 375x667) */
+@media only screen and (max-width: 767px) {
+  .headline.headline-95-desktop {
+    margin-top: 2.4rem;
+  }
+  .headline-95-desktop .headline__subtitle.space-top,
+  .headline-95-desktop .headline__btnholder {
+    margin-top: 2.4rem;
+  }
+  .headline-95-desktop .btn-default {
+    height: 6.4rem;
   }
 }
 
@@ -3190,6 +3221,12 @@ form textarea:required:valid {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+/* Below xl the content is full width, so these corner images land on the footer text, logo and buttons */
+@media only screen and (max-width: 1199px) {
+  .bottom__background {
+    display: none;
+  }
 }
 .bottom__background.bottom-bg-01 img, .bottom__background.bottom-bg-02 img, .bottom__background.bottom-bg-03 img {
   display: block;
@@ -4062,6 +4099,28 @@ form textarea:required:valid {
     left: calc(16.66666667% + 2.5rem);
   }
 }
+/* Mobile/tablet bottom menu: full width, icons spread evenly (flex on the items, since the
+   markup's Bootstrap justify-content-start utilities are !important) */
+@media only screen and (max-width: 1199px) {
+  .header {
+    right: 2rem;
+  }
+  .header__navigation,
+  .menu {
+    width: 100%;
+  }
+  .menu__item {
+    flex: 1 1 0;
+  }
+  .menu__link {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    right: 5rem;
+  }
+}
 
 .header__navigation {
   position: relative;
@@ -4096,6 +4155,13 @@ form textarea:required:valid {
   .logo {
     top: 3rem;
     left: 5rem;
+  }
+}
+/* Below xl the content runs full width under the fixed logo/theme dot, so give them a backdrop */
+@media only screen and (max-width: 1199px) {
+  .logo,
+  .color {
+    background-color: rgba(var(--base-rgb), 0.85);
   }
 }
 
@@ -7089,11 +7155,23 @@ form textarea:required:valid {
   align-items: center;
   justify-content: space-between;
   gap: 0.6rem 1.6rem;
-  margin-top: 2.4rem;
+  /* side margins match .content__block's gutters — app.js appends this outside those blocks */
+  margin: 2.4rem 2rem 0;
   padding: 1.6rem 0 0.4rem;
   border-top: 1px solid var(--neutral-bright, rgba(0, 0, 0, 0.12));
   font-size: 1.3rem;
   opacity: 0.75;
+}
+@media only screen and (min-width: 768px) {
+  .footer__legal {
+    margin: 2.4rem 5rem 0;
+  }
+}
+/* lift the row clear of the floating .sticky-cta, which only shows below xl */
+@media only screen and (max-width: 1199px) {
+  .footer__legal {
+    padding-bottom: 4.4rem;
+  }
 }
 .footer__legal a {
   color: inherit;

@@ -382,8 +382,8 @@ AddDefaultCharset utf-8
 # you should choose one of the alternatives and redirect the other
 # one.
 #
-# Canonical host for 6digit.com is chosen here as the non-`www.` form
-# (https://6digit.com). If you'd rather canonicalize to `https://www.6digit.com`,
+# Canonical host for 6digitmedia.com is chosen here as the non-`www.` form
+# (https://6digitmedia.com). If you'd rather canonicalize to `https://www.6digitmedia.com`,
 # swap to "Option 2" below AND update the canonical/OG/JSON-LD URLs in
 # index.html to match.
 #
@@ -587,7 +587,7 @@ AddDefaultCharset utf-8
 # http://blogs.msdn.com/b/ieinternals/archive/2014/08/18/hsts-strict-transport-security-attacks-mitigations-deployment-https.aspx
 
 # FIXED (2026): enabled with a short max-age for initial rollout. Once HTTPS is
-# confirmed working reliably on https://6digit.com, raise max-age back up
+# confirmed working reliably on https://6digitmedia.com, raise max-age back up
 # (16070400 = ~6 months is the common long-term value).
 <IfModule mod_headers.c>
     Header set Strict-Transport-Security "max-age=300; includeSubDomains"

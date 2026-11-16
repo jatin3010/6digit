@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://6digit.com/</loc>
+    <loc>https://6digitmedia.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://6digit.com/about.html</loc>
+    <loc>https://6digitmedia.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://6digit.com/projects.html</loc>
+    <loc>https://6digitmedia.com/projects.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://6digit.com/contact.html</loc>
+    <loc>https://6digitmedia.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- The four project-*.html pages are left out (and marked noindex) until their [TODO] case-study
        text is replaced with real content. Add them back here when that is done. -->
   <url>
-    <loc>https://6digit.com/privacy.html</loc>
+    <loc>https://6digitmedia.com/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://6digit.com/terms.html</loc>
+    <loc>https://6digitmedia.com/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -104,7 +104,8 @@
   justify-self: center;
   overflow: hidden;
   padding: 0.06em 0;
-  font-size: clamp(16px, 40cqh, 140px);
+  /* cqw cap: on narrow rows a height-only size made long labels run into the meta column */
+  font-size: clamp(16px, min(40cqh, 5.4cqw), 140px);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.035em;
