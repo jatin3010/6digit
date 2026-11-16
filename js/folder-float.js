@@ -63,6 +63,8 @@
       label: options.label ?? 'Design feedback',
       sublabel: options.sublabel ?? '',
       trigger: options.trigger ?? 'hover',
+      // Media query; while it matches, the folder opens as it scrolls into view instead of on hover.
+      scrollQuery: options.scrollQuery,
       defaultOpen: options.defaultOpen ?? false,
       closeOnSelect: options.closeOnSelect ?? true,
       physics: options.physics ?? true,
@@ -370,12 +372,24 @@
       if (!d.moved && e.type === 'pointerup') pick(item, i);
     }
 
+    const scrollMq = o.scrollQuery ? window.matchMedia(o.scrollQuery) : null;
     const hover = o.trigger === 'hover';
     if (hover) {
-      container.addEventListener('pointerenter', () => set(true));
-      container.addEventListener('pointerleave', () => {
-        if (!world.drag) set(false);
+      container.addEventListener('pointerenter', () => {
+        if (!scrollMq?.matches) set(true);
       });
+      container.addEventListener('pointerleave', () => {
+        if (!scrollMq?.matches && !world.drag) set(false);
+      });
+    }
+    if (scrollMq) {
+      // Open once half the folder is above the bottom quarter of the screen; close only when it has
+      // left that area, so small scrolls in between don't make it flicker.
+      new IntersectionObserver(([entry]) => {
+        if (!scrollMq.matches) return;
+        if (entry.intersectionRatio >= 0.5) set(true);
+        else if (!entry.isIntersecting) set(false);
+      }, { rootMargin: '0px 0px -25% 0px', threshold: [0, 0.5] }).observe(folder);
     }
     container.addEventListener('keydown', e => {
       if (e.key === 'Escape' && open) {

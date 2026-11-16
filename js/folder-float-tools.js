@@ -22,6 +22,7 @@
       label: 'Our stack',
       sublabel: `${tools.length} platforms`,
       trigger: 'hover',
+      scrollQuery: '(max-width: 767px), (hover: none)',  // phones and touch screens: open by scrolling
       closeOnSelect: false,
       physics: true,
       drift: 0.5,
