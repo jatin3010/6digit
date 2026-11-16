@@ -701,7 +701,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const legal = document.createElement('div');
     legal.className = 'footer__legal';
     legal.innerHTML =
-      '<span>© ' + new Date().getFullYear() + ' 6Digit. All rights reserved.</span>' +
+      '<span>© ' + new Date().getFullYear() + ' 6Digit Media. All rights reserved.</span>' +
       '<span class="footer__legal-links">' +
       '<a href="privacy.html">Privacy Policy</a>' +
       '<a href="terms.html">Terms of Service</a>' +

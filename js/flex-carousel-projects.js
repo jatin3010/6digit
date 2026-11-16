@@ -4,25 +4,25 @@
 const items = [
   {
     src: 'img/placeholders/photo-placeholder.svg',
-    alt: '6Digit SEO growth campaign placeholder — replace with a real project image',
+    alt: '6Digit Media SEO growth campaign placeholder — replace with a real project image',
     title: 'SEO Growth Campaign',
     href: 'project-seo-growth.html'
   },
   {
     src: 'img/placeholders/photo-placeholder.svg',
-    alt: '6Digit Paid ads campaign placeholder — replace with a real project image',
+    alt: '6Digit Media Paid ads campaign placeholder — replace with a real project image',
     title: 'Paid Ads Campaign',
     href: 'project-paid-ads.html'
   },
   {
     src: 'img/placeholders/photo-placeholder.svg',
-    alt: '6Digit Social media growth placeholder — replace with a real project image',
+    alt: '6Digit Media Social media growth placeholder — replace with a real project image',
     title: 'Social Media Growth',
     href: 'project-social-media.html'
   },
   {
     src: 'img/placeholders/photo-placeholder.svg',
-    alt: '6Digit Website redesign placeholder — replace with a real project image',
+    alt: '6Digit Media Website redesign placeholder — replace with a real project image',
     title: 'Website Redesign',
     href: 'project-web-design.html'
   }

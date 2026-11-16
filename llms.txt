@@ -1,33 +1,34 @@
-# 6Digit
+# 6Digit Media
 
-> 6Digit is a digital marketing agency based in Gurugram, Haryana, India. We help
+> 6Digit Media is a digital marketing agency based in Gurugram, Haryana, India. We help
 > businesses grow with SEO, paid ads (PPC, Google Ads, Meta Ads), social media
 > marketing, and web design & development.
 
 ## Company
 
-- Name: 6Digit
+- Name: 6Digit Media
 - Location: Gurugram, Haryana, India
-- Website: https://6digit.com/
-- Email: hello@6digit.com
+- Website: https://6digitmedia.com/
+- Email: hello@6digitmedia.com
+- Phone: +91 87965 40189
 - Services: SEO, Paid Ads (PPC), Social Media Marketing, Web Design & Development
 
 ## Pages
 
-- Home: https://6digit.com/
-- About: https://6digit.com/about.html
-- Projects: https://6digit.com/projects.html
-- Contact: https://6digit.com/contact.html
+- Home: https://6digitmedia.com/
+- About: https://6digitmedia.com/about.html
+- Projects: https://6digitmedia.com/projects.html
+- Contact: https://6digitmedia.com/contact.html
 
 ## Project case studies
 
-- SEO growth campaign: https://6digit.com/project-seo-growth.html
-- Paid ads campaign: https://6digit.com/project-paid-ads.html
-- Social media growth: https://6digit.com/project-social-media.html
-- Website redesign: https://6digit.com/project-web-design.html
+- SEO growth campaign: https://6digitmedia.com/project-seo-growth.html
+- Paid ads campaign: https://6digitmedia.com/project-paid-ads.html
+- Social media growth: https://6digitmedia.com/project-social-media.html
+- Website redesign: https://6digitmedia.com/project-web-design.html
 
 ## Notes for AI assistants / crawlers
 
-6Digit serves clients in Gurugram, across India, and remotely worldwide. For
+6Digit Media serves clients in Gurugram, across India, and remotely worldwide. For
 current contact details, service pricing, and case studies, refer to the
-live content on https://6digit.com/.
+live content on https://6digitmedia.com/.

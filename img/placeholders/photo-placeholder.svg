@@ -7,6 +7,6 @@
   </g>
   <circle cx="400" cy="260" r="46" fill="none" stroke="#9a9a9a" stroke-width="4"/>
   <path d="M378 256 L396 274 L430 232" fill="none" stroke="#9a9a9a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="400" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#cfcfcf">6Digit</text>
+  <text x="400" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#cfcfcf">6Digit Media</text>
   <text x="400" y="402" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#9a9a9a">Replace with a real project image</text>
 </svg>

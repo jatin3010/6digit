@@ -1,6 +1,6 @@
 <?php
 /**
- * 6Digit contact form handler.
+ * 6Digit Media contact form handler.
  *
  * SECURITY NOTE (fixed 2026): the original version of this script trusted
  * client-submitted "admin_email" / "project_name" / "form_subject" fields as
@@ -19,9 +19,8 @@ if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
 }
 
 // --- Recipient is fixed server-side. NEVER take this from client input. ---
-// TODO: confirm 6Digit's real inbox and update this constant.
-const RECIPIENT_EMAIL = 'hello@6digit.com';
-const SITE_NAME       = '6Digit';
+const RECIPIENT_EMAIL = 'hello@6digitmedia.com';
+const SITE_NAME       = '6Digit Media';
 
 // --- Honeypot: a hidden field ("website") that real visitors never fill in. ---
 if ( !empty($_POST['website']) ) {
@@ -85,7 +84,7 @@ function adopt($text) {
 	return '=?UTF-8?B?' . base64_encode($text) . '?=';
 }
 
-$form_subject = clean_header_value($_POST['form_subject'] ?? 'New enquiry from 6digit.com');
+$form_subject = clean_header_value($_POST['form_subject'] ?? 'New enquiry from 6digitmedia.com');
 
 // Reply-To: only use the submitted email if it's actually a valid address; otherwise fall back.
 $submitted_email = clean_header_value($_POST['E-mail'] ?? '');

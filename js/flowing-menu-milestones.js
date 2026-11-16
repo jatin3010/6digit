@@ -2,7 +2,7 @@
 // Classic script: relies on window.initFlowingMenu set by flowing-menu.js, loaded before this.
 (function () {
   const milestones = [
-    { text: '6Digit founded', meta: '[TODO: year]' },
+    { text: '6Digit Media founded', meta: '[TODO: year]' },
     { text: 'Expanded our services', meta: '2025' },
     { text: 'Growing businesses online', meta: 'Today' }
   ];
