@@ -4,9 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /img/placeholders/
-Disallow: /index-demo-1.html
-Disallow: /index-demo-2.html
-Disallow: /source-files/
 Disallow: /.rate_limit/
 
 # Explicitly welcome major AI/answer-engine crawlers (GEO — Generative Engine Optimization).
