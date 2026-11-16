@@ -6543,6 +6543,34 @@ form textarea:required:valid {
   -moz-border-radius: var(--_radius);
        border-radius: var(--_radius);
 }
+/* Testimonial cards take the opposite colours to the page (cream card on the red page, red card
+   on the light page); everything inside the card follows these variables. */
+:root:not([color-scheme=light]) .testimonials-card {
+  --base: var(--base--light);
+  --base-rgb: var(--base-rgb--light);
+  --t-bright: var(--t-bright--light);
+  /* the light scheme's medium/muted/stroke values are template greys, so derive them from the red/cream pair */
+  --t-medium: color-mix(in srgb, var(--t-bright--light) 80%, var(--base--light));
+  --t-muted: color-mix(in srgb, var(--t-bright--light) 60%, var(--base--light));
+  --stroke-elements: color-mix(in srgb, var(--t-bright--light) 30%, var(--base--light));
+  --stroke-controls: var(--stroke-controls--light);
+  --t-opp-bright: var(--t-opp-bright--light);
+  /* :root resolves these against the page colours, so they must be set again here */
+  --accent-red: var(--t-bright);
+  --accent-red-contrast: var(--base);
+}
+[color-scheme=light] .testimonials-card {
+  --base: var(--base--dark);
+  --base-rgb: var(--base-rgb--dark);
+  --t-bright: var(--t-bright--dark);
+  --t-medium: var(--t-medium--dark);
+  --t-muted: var(--t-muted--dark);
+  --stroke-elements: var(--stroke-elements--dark);
+  --stroke-controls: var(--stroke-controls--dark);
+  --t-opp-bright: var(--t-opp-bright--dark);
+  --accent-red: var(--t-bright);
+  --accent-red-contrast: var(--base);
+}
 @media only screen and (min-width: 992px) {
   .testimonials-card {
     height: 500px;
@@ -6851,7 +6879,7 @@ form textarea:required:valid {
   height: 0;
   -moz-border-radius: 50%;
        border-radius: 50%;
-  background-color: var(--t-bright);
+  background-color: var(--brand, var(--t-bright));
   -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   -moz-transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -6877,8 +6905,8 @@ form textarea:required:valid {
   will-change: transform;
 }
 .no-touch .socials-cards__link:hover {
-  color: var(--t-opp-bright);
-  background-color: var(--t-bright);
+  color: var(--brand-ink, var(--t-opp-bright));
+  background-color: var(--brand, var(--t-bright));
   -webkit-transition: color 0.3s 0s, background-color 0.3s 0.24s, -webkit-box-shadow 0.5s, -webkit-transform 0.3s ease-in-out;
   transition: color 0.3s 0s, background-color 0.3s 0.24s, -webkit-box-shadow 0.5s, -webkit-transform 0.3s ease-in-out;
   -moz-transition: color 0.3s 0s, background-color 0.3s 0.24s, box-shadow 0.5s, transform 0.3s ease-in-out, -moz-box-shadow 0.5s, -moz-transform 0.3s ease-in-out;
@@ -6886,7 +6914,7 @@ form textarea:required:valid {
   transition: color 0.3s 0s, background-color 0.3s 0.24s, box-shadow 0.5s, transform 0.3s ease-in-out, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s, -webkit-transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
 }
 .no-touch .socials-cards__link:hover i {
-  color: var(--t-opp-bright);
+  color: var(--brand-ink, var(--t-opp-bright));
   -webkit-transform: scale3d(0.96, 0.96, 1);
      -moz-transform: scale3d(0.96, 0.96, 1);
           transform: scale3d(0.96, 0.96, 1);
@@ -6894,6 +6922,26 @@ form textarea:required:valid {
 .no-touch .socials-cards__link:hover em {
   width: 225%;
   height: 40.95rem;
+}
+/* On hover each social card fills with that network's own brand colour, white icon on top.
+   Matched on the link address, so the HTML needs no extra classes. */
+.socials-cards__link[href*="linkedin.com"],
+.socials-cards__link[href*="instagram.com"],
+.socials-cards__link[href*="facebook.com"],
+.socials-cards__link[href^="https://x.com"],
+.socials-cards__link[href*="twitter.com"],
+.socials-cards__link[href*="behance.net"] {
+  --brand-ink: #ffffff;
+}
+.socials-cards__link[href*="linkedin.com"] { --brand: #0A66C2; }
+.socials-cards__link[href*="facebook.com"] { --brand: #1877F2; }
+.socials-cards__link[href*="behance.net"] { --brand: #1769FF; }
+.socials-cards__link[href^="https://x.com"],
+.socials-cards__link[href*="twitter.com"] { --brand: #000000; }
+.socials-cards__link[href*="instagram.com"] { --brand: #E4405F; }
+/* Instagram's brand is a gradient; the growing circle covers the card, so it carries it */
+.socials-cards__link[href*="instagram.com"] em {
+  background-image: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%);
 }
 @media only screen and (min-width: 1400px) {
   .socials-cards__link i {
