@@ -6543,6 +6543,34 @@ form textarea:required:valid {
   -moz-border-radius: var(--_radius);
        border-radius: var(--_radius);
 }
+/* Testimonial cards take the opposite colours to the page (cream card on the red page, red card
+   on the light page); everything inside the card follows these variables. */
+:root:not([color-scheme=light]) .testimonials-card {
+  --base: var(--base--light);
+  --base-rgb: var(--base-rgb--light);
+  --t-bright: var(--t-bright--light);
+  /* the light scheme's medium/muted/stroke values are template greys, so derive them from the red/cream pair */
+  --t-medium: color-mix(in srgb, var(--t-bright--light) 80%, var(--base--light));
+  --t-muted: color-mix(in srgb, var(--t-bright--light) 60%, var(--base--light));
+  --stroke-elements: color-mix(in srgb, var(--t-bright--light) 30%, var(--base--light));
+  --stroke-controls: var(--stroke-controls--light);
+  --t-opp-bright: var(--t-opp-bright--light);
+  /* :root resolves these against the page colours, so they must be set again here */
+  --accent-red: var(--t-bright);
+  --accent-red-contrast: var(--base);
+}
+[color-scheme=light] .testimonials-card {
+  --base: var(--base--dark);
+  --base-rgb: var(--base-rgb--dark);
+  --t-bright: var(--t-bright--dark);
+  --t-medium: var(--t-medium--dark);
+  --t-muted: var(--t-muted--dark);
+  --stroke-elements: var(--stroke-elements--dark);
+  --stroke-controls: var(--stroke-controls--dark);
+  --t-opp-bright: var(--t-opp-bright--dark);
+  --accent-red: var(--t-bright);
+  --accent-red-contrast: var(--base);
+}
 @media only screen and (min-width: 992px) {
   .testimonials-card {
     height: 500px;
