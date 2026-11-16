@@ -209,7 +209,7 @@
 }
 
 .about-image-1 {
-  background-image: url("/img/about.svg");
+  background-image: url("../img/about.svg");  /* relative: the site is served from a sub-folder on GitHub Pages */
 }
 /* The about.svg is the wide 6Digit wordmark. `cover` (from .divider-image) zooms it to
    fill the band, which crops the logo's sides on a narrow phone. Show it whole instead.
