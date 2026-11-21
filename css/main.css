@@ -6847,18 +6847,9 @@ form textarea:required:valid {
   position: relative;
 }
 
+/* Three networks (LinkedIn, Instagram, Facebook): one row of three at every width */
 .socials-cards__item {
-  width: 50%;
-}
-@media only screen and (min-width: 768px) {
-  .socials-cards__item {
-    width: 33.33333334%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .socials-cards__item {
-    width: 20%;
-  }
+  width: 33.33333334%;
 }
 
 .socials-cards__link {
@@ -6929,13 +6920,11 @@ form textarea:required:valid {
 .socials-cards__link[href*="instagram.com"],
 .socials-cards__link[href*="facebook.com"],
 .socials-cards__link[href^="https://x.com"],
-.socials-cards__link[href*="twitter.com"],
-.socials-cards__link[href*="behance.net"] {
+.socials-cards__link[href*="twitter.com"] {
   --brand-ink: #ffffff;
 }
 .socials-cards__link[href*="linkedin.com"] { --brand: #0A66C2; }
 .socials-cards__link[href*="facebook.com"] { --brand: #1877F2; }
-.socials-cards__link[href*="behance.net"] { --brand: #1769FF; }
 .socials-cards__link[href^="https://x.com"],
 .socials-cards__link[href*="twitter.com"] { --brand: #000000; }
 .socials-cards__link[href*="instagram.com"] { --brand: #E4405F; }
