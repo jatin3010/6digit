@@ -143,12 +143,14 @@
   height: 0;
 }
 
+/* Hover-hold area over the floating pills. Kept to the pills' own zone (spread + ZONE_PAD in folder-float.js):
+   any wider and it pokes past the screen edge on phones, widening the whole page. */
 .folder-float[data-open] .folder-float__items::before {
   content: '';
   position: absolute;
   top: calc(-1 * (var(--ff-lift) + 120px));
-  left: calc(-1 * (var(--ff-spread) + 100px));
-  width: calc(2 * var(--ff-spread) + 200px);
+  left: calc(-1 * (var(--ff-spread) + 8px));
+  width: calc(2 * var(--ff-spread) + 16px);
   height: calc(var(--ff-lift) + 120px);
 }
 
