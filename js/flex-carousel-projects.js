@@ -1,4 +1,4 @@
-// Shared config for the portfolio glass-bend carousel, used by both index.html and projects.html.
+// Config for the homepage portfolio glass-bend carousel (index.html).
 // Classic script: relies on window.initFlexCarousel set by flex-carousel.js, loaded before this.
 (function () {
 const items = [
@@ -37,9 +37,25 @@ if (container && window.initFlexCarousel) {
     gap: 16,
     focusOnClick: true,
     captions: true,
+    captureWheel: false, // page scroll drives the slides (below), so vertical wheel must reach the page
     onSelect: (index, item) => {
       if (item.href) window.location.href = item.href;
     }
+  }).then(carousel => {
+    // Pin the section while scrolling walks through every slide once, then release to the next section.
+    if (!carousel || !window.ScrollTrigger) return;
+    let shown = 0;
+    ScrollTrigger.create({
+      trigger: container.closest('section'),
+      start: 'center center',
+      end: `+=${(items.length - 1) * 100}%`,
+      pin: true,
+      onUpdate: self => {
+        const i = Math.round(self.progress * (items.length - 1));
+        if (i !== shown) carousel.show((shown = i));
+      }
+    });
+    ScrollTrigger.refresh(); // the pin adds page height after app.js measured its own triggers
   });
 }
 })();

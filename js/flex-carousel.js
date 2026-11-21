@@ -724,7 +724,8 @@ async function initFlexCarousel(container, items, options = {}) {
     if (!introState.running && !introState.done) {
       const allSettled = slots.every(slot => slot.loaded || slot.failed);
       if (allSettled || now - introState.readyAt > 3500) {
-        goal = snapPoint(m, goal);
+        // pos 0 sits on the loop seam, so snapping from it lands on the first OR last card depending on image load order
+        goal = interactedAt < 0 ? m.centers[0] : snapPoint(m, goal);
         pos = goal;
         beginIntro(m);
       }
@@ -1190,6 +1191,15 @@ async function initFlexCarousel(container, items, options = {}) {
   start();
   // No teardown is returned: this is a static multi-page site, so the carousel
   // only ever goes away on a full page navigation, which the browser cleans up.
+  return {
+    // Lets the page drive the carousel (e.g. from scroll). Steps in a straight line, never wrapping the long way round.
+    show: index => {
+      skipIntro();
+      closeFocus();
+      const m = metrics();
+      step(m, index - nearest(m, snapPoint(m, goal)));
+    }
+  };
 }
 
 window.initFlexCarousel = initFlexCarousel;
